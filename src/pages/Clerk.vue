@@ -31,7 +31,7 @@ export default {
       Loading.show({
         spinner: QSpinnerPuff
       })
-      await axios.delete(`https://localhost:8080/api/reservations/${id}`, {
+      await axios.delete(`http://localhost:8080/api/reservations/${id}`, {
         headers: {
           'Content-Type': 'application/json',
           Authorization: `Bearer ${localStorage.getItem('token')}`

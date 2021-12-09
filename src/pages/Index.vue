@@ -51,7 +51,7 @@ export default {
       Loading.show({
         spinner: QSpinnerPuff
       })
-      await axios.post(`https://localhost:8080/api/guest/reservations?checkinDate=${this.checkin}&checkoutDate=${this.checkout}&room=${id}`, null, {
+      await axios.post(`http://localhost:8080/api/guest/reservations?checkinDate=${this.checkin}&checkoutDate=${this.checkout}&room=${id}`, null, {
         headers: {
           'Content-Type': 'application/json',
           Authorization: `Bearer ${localStorage.getItem('token')}`
@@ -67,7 +67,7 @@ export default {
       Loading.show({
         spinner: QSpinnerPuff
       })
-      const h = await axios.get('https://localhost:8080/api/guest/hotels', {
+      const h = await axios.get('http://localhost:8080/api/guest/hotels', {
         headers: {
           'Content-Type': 'application/json',
           Authorization: `Bearer ${localStorage.getItem('token')}`
@@ -80,7 +80,7 @@ export default {
       Loading.show({
         spinner: QSpinnerPuff
       })
-      const h = await axios.get(`https://localhost:8080/api/guest/roomTypes?hotel=${id}`, {
+      const h = await axios.get(`http://localhost:8080/api/guest/roomTypes?hotel=${id}`, {
         headers: {
           'Content-Type': 'application/json',
           Authorization: `Bearer ${localStorage.getItem('token')}`
@@ -93,7 +93,7 @@ export default {
       Loading.show({
         spinner: QSpinnerPuff
       })
-      const h = await axios.get(`https://localhost:8080/api/guest/rooms?roomType=${id}`, {
+      const h = await axios.get(`http://localhost:8080/api/guest/rooms?roomType=${id}`, {
         headers: {
           'Content-Type': 'application/json',
           Authorization: `Bearer ${localStorage.getItem('token')}`
