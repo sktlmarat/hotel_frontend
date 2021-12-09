@@ -31,7 +31,7 @@ export default {
       Loading.show({
         spinner: QSpinnerPuff
       })
-      const res = await axios.get('https://hcsm.herokuapp.com/api/guest/reservations', {
+      const res = await axios.get('https://localhost:8080/api/guest/reservations', {
         headers: {
           'Content-Type': 'application/json',
           Authorization: `Bearer ${localStorage.getItem('token')}`

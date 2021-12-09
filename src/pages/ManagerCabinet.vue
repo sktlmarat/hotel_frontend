@@ -55,7 +55,7 @@ export default {
         address: this.address,
         phone: this.phone
       })
-      await axios.post(`https://hcsm.herokuapp.com/api/hotels/?name=${this.name}&description=${this.description}&address=${this.address}&phone=${this.phone}`, data, {
+      await axios.post(`https://localhost:8080/api/hotels/?name=${this.name}&description=${this.description}&address=${this.address}&phone=${this.phone}`, data, {
         headers: {
           'Content-Type': 'application/json',
           Authorization: `Bearer ${localStorage.getItem('token')}`
@@ -71,7 +71,7 @@ export default {
       Loading.show({
         spinner: QSpinnerPuff
       })
-      const hotels = await axios.get('https://hcsm.herokuapp.com/api/hotels', {
+      const hotels = await axios.get('https://localhost:8080/api/hotels', {
         headers: {
           'Content-Type': 'application/json',
           Authorization: `Bearer ${localStorage.getItem('token')}`
@@ -84,7 +84,7 @@ export default {
       Loading.show({
         spinner: QSpinnerPuff
       })
-      await axios.put(`https://hcsm.herokuapp.com/api/employees/${id}?name=${name}&surname=${surname}&mobilePhone=${mobilePhone}&payPerHour=${payPerHour}&hoursWorked=0`, null, {
+      await axios.put(`https://localhost:8080/api/employees/${id}?name=${name}&surname=${surname}&mobilePhone=${mobilePhone}&payPerHour=${payPerHour}&hoursWorked=0`, null, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`
         }

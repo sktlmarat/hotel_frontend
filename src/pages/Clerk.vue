@@ -31,7 +31,7 @@ export default {
       Loading.show({
         spinner: QSpinnerPuff
       })
-      await axios.delete(`https://hcsm.herokuapp.com/api/reservations/${id}`, {
+      await axios.delete(`https://localhost:8080/api/reservations/${id}`, {
         headers: {
           'Content-Type': 'application/json',
           Authorization: `Bearer ${localStorage.getItem('token')}`
@@ -43,7 +43,7 @@ export default {
       Loading.show({
         spinner: QSpinnerPuff
       })
-      const res = await axios.get('https://hcsm.herokuapp.com/api/reservations', {
+      const res = await axios.get('http://localhost:8080/api/reservations', {
         headers: {
           'Content-Type': 'application/json',
           Authorization: `Bearer ${localStorage.getItem('token')}`

@@ -59,7 +59,7 @@ export default {
       Loading.show({
         spinner: QSpinnerPuff
       })
-      axios.post('https://hcsm.herokuapp.com/api/auth/register', data, {
+      axios.post('https://localhost:8080/api/auth/register', data, {
         headers: {
           'Content-Type': 'application/json'
         }
